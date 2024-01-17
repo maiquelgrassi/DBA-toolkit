@@ -1,5 +1,4 @@
 -- Return the cluster size and the sizes of the databases on the server, ordered by size descendente.
-
 SELECT
 	'-' AS "RANKING"
 	,'CLUSTER (total)' AS "DATABASE" 
