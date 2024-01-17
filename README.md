@@ -1,2 +1,2 @@
 # DBA-toolkit
-This repository contains materials dedicated to use by DBAs who like to streamline their tasks on the command line, particularly using psql or another tool as the command-line client for interacting with PostgreSQL.
+This repository contains materials dedicated to use by DBAs looking to streamline their tasks, particularly by utilizing psql or another tool as the client for interacting with the PostgreSQL server.
