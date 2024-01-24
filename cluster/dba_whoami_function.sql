@@ -8,7 +8,7 @@
 -- Created by: Maiquel O. Grassi
 
 CREATE OR REPLACE FUNCTION public.dba_whoami()
-RETURNS TABLE ("Current Connection Information" text) AS
+RETURNS TABLE ("Current Connection Informations" text) AS
 $$
 BEGIN
 	RETURN query SELECT UNNEST
