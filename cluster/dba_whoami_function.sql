@@ -18,7 +18,7 @@ BEGIN
 			'DATABASE: '		||	current_database()
 			,'SCHEMA: '		||	current_schema
 			,'USER: '		||	current_user
-			,'VERSION: '		||	regexp_replace(substring(version(),1,16),'[\s,]+','','g')
+			,'VERSION: '		||	regexp_replace(substring(version(),1,15),'\s,+$','')
 			,'SERVER ADRESS: '	||	regexp_replace(inet_server_addr()::text,'/.*','')
 			,'SERVER PORT: '	||	inet_server_port()::text
 			,'CLIENT ADRESS: '	||	regexp_replace(inet_client_addr()::text,'/.*','')
