@@ -15,16 +15,16 @@ BEGIN
 		ARRAY
 		[
 			'DATABASE: '		||	current_database()
-			,'SCHEMA: '			||	current_schema
-			,'USER: '			||	current_user
+			,'SCHEMA: '		||	current_schema
+			,'USER: '		||	current_user
 			,'VERSION: '		||	regexp_replace(substring(version(),1,16),'[\s,]+','','g')
 			,'SERVER ADRESS: '	||	regexp_replace(inet_server_addr()::text,'/.*','')
 			,'SERVER PORT: '	||	inet_server_port()::text
 			,'CLIENT ADRESS: '	||	regexp_replace(inet_client_addr()::text,'/.*','')
 			,'CLIENT PORT: '	||	inet_client_port()::text
-			,'PID: '			||	pg_backend_pid()::text
-			,'DATE: '			||	to_char(current_date,'dd/MM/yyyy')
-			,'HOUR: '			||	to_char(clock_timestamp(),'HH24:MI:SS.MS')
+			,'PID: '		||	pg_backend_pid()::text
+			,'DATE: '		||	to_char(current_date,'dd/MM/yyyy')
+			,'HOUR: '		||	to_char(clock_timestamp(),'HH24:MI:SS.MS')
 		]
 	);
 END;
