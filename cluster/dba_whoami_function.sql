@@ -1,5 +1,5 @@
 -- Return:
-    --Do you remember the Linux command 'whoami'? Well, it's like that,
+    -- Do you remember the Linux command 'whoami'? Well, it's like that,
     -- this function returns very important information for the DBA.
 -- Tested on:
 	-- PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
