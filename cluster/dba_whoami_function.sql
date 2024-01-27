@@ -19,9 +19,9 @@ BEGIN
 			,'SCHEMA: '		||	current_schema
 			,'USER: '		||	current_user
 			,'VERSION: '		||	regexp_replace(substring(version(),1,15),'\s,+$','')
-			,'SERVER ADRESS: '	||	regexp_replace(inet_server_addr()::text,'/.*','')
+			,'SERVER ADDRESS: '	||	regexp_replace(inet_server_addr()::text,'/.*','')
 			,'SERVER PORT: '	||	inet_server_port()::text
-			,'CLIENT ADRESS: '	||	regexp_replace(inet_client_addr()::text,'/.*','')
+			,'CLIENT ADDRESS: '	||	regexp_replace(inet_client_addr()::text,'/.*','')
 			,'CLIENT PORT: '	||	inet_client_port()::text
 			,'PID: '		||	pg_backend_pid()::text
 			,'DATE: '		||	to_char(current_date,'dd/MM/yyyy')
