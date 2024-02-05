@@ -16,8 +16,8 @@ BEGIN
 		ARRAY
 		[
 			'DATABASE: '		||	pg_catalog.current_database()
-			,'SCHEMA: '		||	pg_catalog.current_schema
-			,'USER: '		||	pg_catalog.current_user
+			,'SCHEMA: '		||	current_schema
+			,'USER: '		||	current_user
 			,'VERSION: '		||	pg_catalog.current_setting('server_version')
 			,'SERVER ADDRESS: '	||	regexp_replace(pg_catalog.inet_server_addr()::text,'/.*','')
 			,'SERVER PORT: '	||	pg_catalog.current_setting('port')
