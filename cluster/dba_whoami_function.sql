@@ -15,15 +15,15 @@ BEGIN
 	(
 		ARRAY
 		[
-			'DATABASE: '		||	current_database()
-			,'SCHEMA: '		||	current_schema
-			,'USER: '		||	current_user
-			,'VERSION: '		||	regexp_replace(substring(version(),1,15),'\s,+$','')
-			,'SERVER ADDRESS: '	||	regexp_replace(inet_server_addr()::text,'/.*','')
-			,'SERVER PORT: '	||	inet_server_port()::text
-			,'CLIENT ADDRESS: '	||	regexp_replace(inet_client_addr()::text,'/.*','')
-			,'CLIENT PORT: '	||	inet_client_port()::text
-			,'PID: '		||	pg_backend_pid()::text
+			'DATABASE: '		||	pg_catalog.current_database()
+			,'SCHEMA: '		||	pg_catalog.current_schema
+			,'USER: '		||	pg_catalog.current_user
+			,'VERSION: '		||	pg_catalog.current_setting('server_version')
+			,'SERVER ADDRESS: '	||	regexp_replace(pg_catalog.inet_server_addr()::text,'/.*','')
+			,'SERVER PORT: '	||	pg_catalog.current_setting('port')
+			,'CLIENT ADDRESS: '	||	regexp_replace(pg_catalog.inet_client_addr()::text,'/.*','')
+			,'CLIENT PORT: '	||	pg_catalog.inet_client_port()::text
+			,'PID: '		||	pg_catalog.pg_backend_pid()::text
 			,'DATE: '		||	to_char(current_date,'dd/MM/yyyy')
 			,'HOUR: '		||	to_char(clock_timestamp(),'HH24:MI:SS.MS')
 		]
