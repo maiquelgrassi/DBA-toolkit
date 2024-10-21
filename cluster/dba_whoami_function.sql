@@ -17,17 +17,18 @@ BEGIN
 	(
 		ARRAY
 		[
-			'DATABASE: '		||	pg_catalog.current_database()
-			,'SCHEMA: '		||	current_schema
-			,'USER: '		||	current_user
-			,'VERSION: '		||	pg_catalog.current_setting('server_version')
-			,'SERVER ADDRESS: '	||	regexp_replace(pg_catalog.inet_server_addr()::text,'/.*','')
-			,'SERVER PORT: '	||	pg_catalog.current_setting('port')
-			,'CLIENT ADDRESS: '	||	regexp_replace(pg_catalog.inet_client_addr()::text,'/.*','')
-			,'CLIENT PORT: '	||	pg_catalog.inet_client_port()::text
-			,'PID: '		||	pg_catalog.pg_backend_pid()::text
-			,'DATE: '		||	to_char(current_date,'dd/MM/yyyy')
-			,'HOUR: '		||	to_char(clock_timestamp(),'HH24:MI:SS.MS')
+			'DATABASE: '			||	pg_catalog.current_database()
+			,'CLUSTER IS IN RECOVERY: '	||	pg_catalog.pg_is_in_recovery()::text
+			,'SCHEMA: '			||	current_schema
+			,'USER: '			||	current_user
+			,'VERSION: '			||	pg_catalog.current_setting('server_version')
+			,'SERVER ADDRESS: '		||	regexp_replace(pg_catalog.inet_server_addr()::text,'/.*','')
+			,'SERVER PORT: '		||	pg_catalog.current_setting('port')
+			,'CLIENT ADDRESS: '		||	regexp_replace(pg_catalog.inet_client_addr()::text,'/.*','')
+			,'CLIENT PORT: '		||	pg_catalog.inet_client_port()::text
+			,'PID: '			||	pg_catalog.pg_backend_pid()::text
+			,'DATE: '			||	to_char(current_date,'dd/MM/yyyy')
+			,'HOUR: '			||	to_char(clock_timestamp(),'HH24:MI:SS.MS')
 		]
 	);
 END;
